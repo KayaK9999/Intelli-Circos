@@ -1,0 +1,16 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/lib/circosJS/dist/circos.module": [".src/lib/circosJS/dist/circos.module", "./types/circos/circos.d.ts"],
+      "@/*": ["./src/*"],
+      "*": ["src/*", "types/*"]
+    },
+    "strict": true,
+    "noEmit": true
+  },
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "types/**/*.d.ts"],
+  "exclude": ["src/**/__tests__/*"]
+}
